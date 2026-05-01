@@ -8,7 +8,7 @@ import { ArrowRight } from "lucide-react";
 // Placeholder data
 const FEATURED_PHOTOS: Photo[] = [
     { id: "1", src: "/assets/IMG_5011.jpeg", alt: "Photo 1", category: "Fashion", title: "Fashion Editorial" },
-    { id: "2", src: "/assets/IMG_5008.jpeg", alt: "Photo 2", category: "Wedding", title: "Pre Wedding" },
+    { id: "2", src: "/assets/SBMS1410.jpg", alt: "Photo 2", category: "Wedding", title: "Pre Wedding" },
     { id: "3", src: "/assets/IMG_5009.jpeg", alt: "Photo 3", category: "Portraits", title: "Portraits" },
     { id: "4", src: "/assets/IMG_5010.jpeg", alt: "Photo 4", category: "Portraits", title: "Family Portraits" },
     { id: "5", src: "/assets/IMG_5013.jpeg", alt: "Photo 5", category: "Wedding", title: "Wedding" },
