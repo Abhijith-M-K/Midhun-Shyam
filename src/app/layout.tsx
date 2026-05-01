@@ -3,7 +3,7 @@ import { Geist, Geist_Mono, Bodoni_Moda } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { FloatingBackground } from "@/components/common/FloatingBackground";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,7 +37,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${bodoni.variable} antialiased bg-black text-white`}
       >
-        <FloatingBackground />
+
         <Navbar />
         <main className="min-h-screen pt-20 pb-10 relative z-0">
           {children}
