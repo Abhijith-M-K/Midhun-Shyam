@@ -7,16 +7,14 @@ export interface Photo {
 }
 
 export const PORTFOLIO_PHOTOS: Photo[] = [
-    // Wedding Category (9 images)
-    { id: "w1", src: "/assets/SBMS0083.jpg", alt: "Wedding 1", category: "Wedding", title: "Eternal Bond" },
-    { id: "w2", src: "/assets/SBMS0521.jpg", alt: "Wedding 2", category: "Wedding", title: "Shared Dreams" },
-    { id: "w3", src: "/assets/SBMS0908.jpg", alt: "Wedding 3", category: "Wedding", title: "Morning Glow" },
-    { id: "w4", src: "/assets/SBMS0939.jpg", alt: "Wedding 4", category: "Wedding", title: "Enchanted Moments" },
-    { id: "w5", src: "/assets/SBMS0976.jpg", alt: "Wedding 5", category: "Wedding", title: "Sunset Love" },
-    { id: "w6", src: "/assets/SBMS1056.jpg", alt: "Wedding 6", category: "Wedding", title: "Park Walk" },
-    { id: "w7", src: "/assets/SBMS1252.jpg", alt: "Wedding 7", category: "Wedding", title: "Love's Light" },
-    { id: "w8", src: "/assets/SBMS1410.jpg", alt: "Wedding 8", category: "Wedding", title: "Golden Hour" },
-    { id: "w9", src: "/assets/SBMS1451.jpg", alt: "Wedding 9", category: "Wedding", title: "Forever Yours" },
+    // Wedding Category (7 images)
+    { id: "w1", src: "/assets/SBMS1064.jpg", alt: "Wedding 1", category: "Wedding", title: "Graceful Moments" },
+    { id: "w2", src: "/assets/SBMS1072.jpg", alt: "Wedding 2", category: "Wedding", title: "Royal Celebration" },
+    { id: "w3", src: "/assets/SBMS1103.jpg", alt: "Wedding 3", category: "Wedding", title: "Traditional Joy" },
+    { id: "w4", src: "/assets/SBMS1895.jpg", alt: "Wedding 4", category: "Wedding", title: "Eternal Love" },
+    { id: "w5", src: "/assets/SBMS1908.jpg", alt: "Wedding 5", category: "Wedding", title: "Sunset Vows" },
+    { id: "w6", src: "/assets/SBMS1942.jpg", alt: "Wedding 6", category: "Wedding", title: "Shared Path" },
+
 
     // Fashion Category (6 images)
     { id: "f1", src: "/assets/IMG_5011.jpeg", alt: "Fashion 1", category: "Fashion", title: "High Street Fashion" },
