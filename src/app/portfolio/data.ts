@@ -9,7 +9,7 @@ export interface Photo {
 export const PORTFOLIO_PHOTOS: Photo[] = [
     // Wedding Category (7 images)
     { id: "w1", src: "/assets/SBMS1064.jpg", alt: "Wedding 1", category: "Wedding", title: "Graceful Moments" },
-    { id: "w2", src: "/assets/SBMS1072.jpg", alt: "Wedding 2", category: "Wedding", title: "Royal Celebration" },
+    { id: "w2", src: "/assets/SBMS1128 2.jpg", alt: "Wedding 2", category: "Wedding", title: "Royal Celebration" },
     { id: "w3", src: "/assets/SBMS1103.jpg", alt: "Wedding 3", category: "Wedding", title: "Traditional Joy" },
     { id: "w4", src: "/assets/SBMS1895.jpg", alt: "Wedding 4", category: "Wedding", title: "Eternal Love" },
     { id: "w5", src: "/assets/SBMS1908.jpg", alt: "Wedding 5", category: "Wedding", title: "Sunset Vows" },
