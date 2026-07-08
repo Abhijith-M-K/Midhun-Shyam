@@ -9,15 +9,21 @@ import { ArrowLeft } from "lucide-react";
 
 interface CategoryPageProps {
     params: Promise<{ category: string }>;
+    searchParams: Promise<{ from?: string }>;
 }
 
-export default function CategoryPage({ params }: CategoryPageProps) {
+export default function CategoryPage({ params, searchParams }: CategoryPageProps) {
     const { category } = use(params);
+    const { from } = use(searchParams);
     const decodedCategory = decodeURIComponent(category);
 
     const filteredPhotos = PORTFOLIO_PHOTOS.filter(
         (photo) => photo.category.toLowerCase() === decodedCategory.toLowerCase()
     );
+
+    const isFromHome = from === "home";
+    const backHref = isFromHome ? "/" : "/portfolio";
+    const backLabel = isFromHome ? "Back to Home" : "Back to Portfolio";
 
     return (
         <div className="container mx-auto px-4 py-8">
@@ -28,11 +34,11 @@ export default function CategoryPage({ params }: CategoryPageProps) {
                 className="mb-8"
             >
                 <Link
-                    href="/portfolio"
+                    href={backHref}
                     className="inline-flex items-center text-zinc-400 hover:text-white transition-colors gap-2 group"
                 >
                     <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
-                    Back to Portfolio
+                    {backLabel}
                 </Link>
             </motion.div>
 

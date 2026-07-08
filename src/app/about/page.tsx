@@ -20,13 +20,13 @@ export default function AboutPage() {
                     <div className="w-full md:w-1/3 aspect-[3/4] bg-zinc-800 rounded-lg overflow-hidden relative">
                         <Image
                             src="/assets/IMG_7889.jpg"
-                            alt="Midhun Shyam"
+                            alt="Midhun Syam"
                             fill
                             className="object-cover"
                             sizes="(max-width: 768px) 100vw, 33vw"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
-                            <span className="text-white font-semibold">Midhun Shyam</span>
+                            <span className="text-white font-semibold">Midhun Syam</span>
                         </div>
                     </div>
 
@@ -42,7 +42,7 @@ export default function AboutPage() {
                             <div className="bg-zinc-900/50 p-6 rounded-lg border border-zinc-800">
                                 <Camera className="w-8 h-8 text-white mb-4" />
                                 <h3 className="text-white font-semibold mb-2">Photography</h3>
-                                <p className="text-sm text-zinc-500">Portrait, Landscape, Event</p>
+                                <p className="text-sm text-zinc-500">Architecture, Landscape, Event</p>
                             </div>
                             <div className="bg-zinc-900/50 p-6 rounded-lg border border-zinc-800">
                                 <Heart className="w-8 h-8 text-white mb-4" />

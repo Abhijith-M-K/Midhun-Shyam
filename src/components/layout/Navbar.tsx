@@ -24,7 +24,7 @@ export function Navbar() {
                         Stories by
                     </span>
                     <span className="text-xl tracking-[-0.02em] font-black text-white uppercase -mt-1">
-                        Midhun Shyam
+                        Midhun Syam
                     </span>
                 </Link>
 

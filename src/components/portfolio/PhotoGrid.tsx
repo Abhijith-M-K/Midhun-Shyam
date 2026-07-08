@@ -20,9 +20,10 @@ interface PhotoGridProps {
     className?: string;
     limit?: number;
     disableLink?: boolean;
+    referrer?: string;
 }
 
-function TiltCard({ photo, index, disableLink }: { photo: Photo, index: number, disableLink?: boolean }) {
+function TiltCard({ photo, index, disableLink, referrer }: { photo: Photo, index: number, disableLink?: boolean, referrer?: string }) {
     const x = useMotionValue(0);
     const y = useMotionValue(0);
 
@@ -81,19 +82,18 @@ function TiltCard({ photo, index, disableLink }: { photo: Photo, index: number, 
             </div>
 
             {/* Overlay */}
-            <div 
-                style={{
-                    transform: "translateZ(75px)",
-                }}
-                className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center"
-            >
-                <h3 className="text-white text-2xl font-bold translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    {photo.title}
-                </h3>
-                <span className="text-zinc-200 text-sm mt-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
-                    {photo.category}
-                </span>
-            </div>
+            {!disableLink && (
+                <div 
+                    style={{
+                        transform: "translateZ(75px)",
+                    }}
+                    className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center"
+                >
+                    <span className="text-zinc-200 text-sm mt-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                        {photo.category}
+                    </span>
+                </div>
+            )}
         </motion.div>
     );
 
@@ -101,20 +101,24 @@ function TiltCard({ photo, index, disableLink }: { photo: Photo, index: number, 
         return Content;
     }
 
+    const href = referrer 
+        ? `/portfolio/${encodeURIComponent(photo.category)}?from=${referrer}`
+        : `/portfolio/${encodeURIComponent(photo.category)}`;
+
     return (
-        <Link href={`/portfolio/${encodeURIComponent(photo.category)}`}>
+        <Link href={href}>
             {Content}
         </Link>
     );
 }
 
-export function PhotoGrid({ photos, className, limit, disableLink }: PhotoGridProps) {
+export function PhotoGrid({ photos, className, limit, disableLink, referrer }: PhotoGridProps) {
     const displayedPhotos = limit ? photos.slice(0, limit) : photos;
 
     return (
         <div className={cn("grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8", className)}>
             {displayedPhotos.map((photo, index) => (
-                <TiltCard key={photo.id} photo={photo} index={index} disableLink={disableLink} />
+                <TiltCard key={photo.id} photo={photo} index={index} disableLink={disableLink} referrer={referrer} />
             ))}
         </div>
     );

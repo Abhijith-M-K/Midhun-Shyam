@@ -87,7 +87,7 @@ export function Hero() {
                     >
                         Midhun
                         <br />
-                        <span className="text-zinc-500">Shyam</span>
+                        <span className="text-zinc-500">Syam</span>
                     </motion.h1>
 
                     <motion.p

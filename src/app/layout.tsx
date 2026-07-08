@@ -23,8 +23,8 @@ const bodoni = Bodoni_Moda({
 });
 
 export const metadata: Metadata = {
-  title: "Stories by Midhun Shyam | Professional Photography",
-  description: "Capturing the moment through light, shadow, and emotion. Professional photography portfolio of Midhun Shyam.",
+  title: "Stories by Midhun Syam | Professional Photography",
+  description: "Capturing the moment through light, shadow, and emotion. Professional photography portfolio of Midhun Syam.",
 };
 
 export default function RootLayout({
