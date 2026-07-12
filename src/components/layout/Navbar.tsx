@@ -16,7 +16,9 @@ export function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl px-8 py-4 rounded-full border border-white/10 glass shadow-2xl">
+        <nav className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl px-8 py-4 border border-white/10 glass shadow-2xl transition-all duration-300 ${
+            isOpen ? "rounded-[2rem]" : "rounded-full"
+        }`}>
             <div className="flex items-center justify-between">
                 {/* Logo */}
                 <Link href="/" className="group flex flex-col items-start">
